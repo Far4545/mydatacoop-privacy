@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Politique de confidentialité — MyDataCoop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0D1B2A;
+      --blue: #1A4F8A;
+      --accent: #2DD4BF;
+      --light: #F0F6FF;
+      --text: #1C2B3A;
+      --muted: #6B8299;
+      --border: #D6E4F0;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      background: #F7FBFF;
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    /* HEADER */
+    header {
+      background: var(--navy);
+      padding: 48px 0 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(45,212,191,0.15) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--blue), transparent);
+    }
+
+    .header-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 32px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(45,212,191,0.15);
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 2px;
+      border: 1px solid rgba(45,212,191,0.3);
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(28px, 5vw, 42px);
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    header h1 span {
+      color: var(--accent);
+    }
+
+    .header-meta {
+      color: rgba(255,255,255,0.45);
+      font-size: 13px;
+      letter-spacing: 0.3px;
+    }
+
+    /* LAYOUT */
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 32px 80px;
+    }
+
+    /* INTRO */
+    .intro {
+      background: var(--light);
+      border-left: 3px solid var(--accent);
+      padding: 20px 24px;
+      margin: 40px 0 48px;
+      border-radius: 0 4px 4px 0;
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    /* SECTIONS */
+    section {
+      margin-bottom: 48px;
+      opacity: 0;
+      transform: translateY(16px);
+      animation: fadeUp 0.5s ease forwards;
+    }
+
+    section:nth-child(1) { animation-delay: 0.05s; }
+    section:nth-child(2) { animation-delay: 0.10s; }
+    section:nth-child(3) { animation-delay: 0.15s; }
+    section:nth-child(4) { animation-delay: 0.20s; }
+    section:nth-child(5) { animation-delay: 0.25s; }
+    section:nth-child(6) { animation-delay: 0.30s; }
+    section:nth-child(7) { animation-delay: 0.35s; }
+    section:nth-child(8) { animation-delay: 0.40s; }
+    section:nth-child(9) { animation-delay: 0.45s; }
+    section:nth-child(10) { animation-delay: 0.50s; }
+    section:nth-child(11) { animation-delay: 0.55s; }
+    section:nth-child(12) { animation-delay: 0.60s; }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section-number {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px;
+      color: var(--navy);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h3 {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin: 24px 0 10px;
+    }
+
+    p {
+      font-size: 15px;
+      color: #3A4F63;
+      margin-bottom: 12px;
+    }
+
+    /* LISTS */
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 8px 0 16px;
+    }
+
+    ul li {
+      font-size: 14px;
+      color: #3A4F63;
+      padding: 7px 0 7px 20px;
+      border-bottom: 1px solid #EBF3FA;
+      position: relative;
+    }
+
+    ul li:last-child { border-bottom: none; }
+
+    ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* TABLE */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin: 16px 0;
+    }
+
+    .data-table th {
+      background: var(--navy);
+      color: #fff;
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    .data-table td {
+      padding: 9px 14px;
+      border-bottom: 1px solid var(--border);
+      color: #3A4F63;
+    }
+
+    .data-table tr:nth-child(even) td {
+      background: #F7FBFF;
+    }
+
+    .yes { color: #059669; font-weight: 500; }
+    .no  { color: var(--muted); }
+
+    /* HIGHLIGHT BOX */
+    .highlight {
+      background: linear-gradient(135deg, #E8F4FF, #F0FFF9);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 20px 24px;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+
+    .highlight strong {
+      display: block;
+      color: var(--navy);
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    /* WARNING */
+    .warning {
+      background: #FFF8E7;
+      border-left: 3px solid #F59E0B;
+      padding: 14px 18px;
+      border-radius: 0 4px 4px 0;
+      font-size: 14px;
+      color: #78490A;
+      margin: 16px 0;
+    }
+
+    /* CONTACT */
+    .contact-box {
+      background: var(--navy);
+      color: #fff;
+      border-radius: 8px;
+      padding: 28px 32px;
+      margin-top: 16px;
+    }
+
+    .contact-box p {
+      color: rgba(255,255,255,0.7);
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .contact-box a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 15px;
+    }
+
+    .contact-box a:hover { text-decoration: underline; }
+
+    /* FOOTER */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.35);
+      text-align: center;
+      padding: 28px;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    footer strong { color: rgba(255,255,255,0.6); }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      .container { padding: 0 20px 60px; }
+      .header-inner { padding: 0 20px; }
+      .data-table { font-size: 12px; }
+      .data-table th, .data-table td { padding: 8px 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="badge">Document légal</div>
+    <h1>Politique de<br><span>confidentialité</span></h1>
+    <p class="header-meta">MyDataCoop &nbsp;·&nbsp; Version 1.0 &nbsp;·&nbsp; 13 mai 2026</p>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="intro">
+    MyDataCoop est une application coopérative de monétisation des données personnelles. Votre vie privée est au cœur de notre modèle : vous restez propriétaires de vos données et décidez librement de leur valorisation.
+  </div>
+
+  <!-- 1 -->
+  <section>
+    <div class="section-number">Article 01</div>
+    <h2>Identité du responsable de traitement</h2>
+    <p>Le responsable du traitement des données collectées via l'application MyDataCoop est :</p>
+    <div class="highlight">
+      <strong>Farid TOUAZI</strong>
+      Domicile : Thonon-les-Bains, France<br>
+      Contact : <a href="mailto:contact.mydatacoop@gmail.com">contact.mydatacoop@gmail.com</a>
+    </div>
+    <p>MyDataCoop est un projet en cours de développement, non encore immatriculé au registre du commerce à la date de publication de la présente politique.</p>
+  </section>
+
+  <!-- 2 -->
+  <section>
+    <div class="section-number">Article 02</div>
+    <h2>Données personnelles collectées</h2>
+
+    <h3>Données de compte</h3>
+    <ul>
+      <li>Adresse e-mail</li>
+      <li>Mot de passe (haché, non lisible)</li>
+      <li>Code de parrainage</li>
+      <li>Coordonnées bancaires IBAN/BIC (uniquement pour les retraits de gains)</li>
+    </ul>
+
+    <h3>Données techniques</h3>
+    <ul>
+      <li>Marque et modèle de l'appareil</li>
+      <li>Version du système d'exploitation Android</li>
+      <li>Type de connexion réseau (Wi-Fi, 4G, 5G)</li>
+      <li>Token Firebase Cloud Messaging (notifications push)</li>
+    </ul>
+
+    <h3>Données de localisation</h3>
+    <ul>
+      <li>Coordonnées GPS approximatives (latitude, longitude)</li>
+      <li>Collecte en arrière-plan toutes les 6 heures avec consentement préalable</li>
+    </ul>
+
+    <h3>Applications installées</h3>
+    <p>MyDataCoop n'analyse pas toutes les applications présentes sur votre appareil. L'application détecte uniquement la présence ou l'absence d'une liste prédéfinie d'environ 90 applications, réparties en 10 catégories :</p>
+    <ul>
+      <li>Réseaux sociaux, Streaming, E-commerce, Transport</li>
+      <li>Livraison alimentaire, Fintech, Éducation, Sport & Fitness</li>
+      <li>Voyage, Santé</li>
+    </ul>
+
+    <h3>Données analytiques dérivées</h3>
+    <ul>
+      <li>Profil socio-économique estimé (CSP, tranche de revenus)</li>
+      <li>Score commercial (0 à 100)</li>
+      <li>Tags comportementaux (ex. : shopper, traveler, fitness)</li>
+    </ul>
+
+    <div class="warning">
+      Aucune donnée de santé au sens de l'article 9 du RGPD, aucune donnée biométrique, ni aucune donnée relative à l'orientation sexuelle ou aux opinions politiques ne sont collectées.
+    </div>
+  </section>
+
+  <!-- 3 -->
+  <section>
+    <div class="section-number">Article 03</div>
+    <h2>Finalités et bases légales</h2>
+    <table class="data-table">
+      <thead>
+        <tr><th>Finalité</th><th>Base légale</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Participation aux ventes groupées B2B</td><td>Consentement (art. 6.1.a)</td></tr>
+        <tr><td>Calcul et versement des rémunérations</td><td>Exécution du contrat (art. 6.1.b)</td></tr>
+        <tr><td>Amélioration des profils et segments</td><td>Intérêt légitime (art. 6.1.f)</td></tr>
+        <tr><td>Notifications ventes et gains</td><td>Consentement (art. 6.1.a)</td></tr>
+        <tr><td>Sécurité et lutte contre la fraude</td><td>Intérêt légitime (art. 6.1.f)</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 4 -->
+  <section>
+    <div class="section-number">Article 04</div>
+    <h2>Partage des données avec des tiers</h2>
+    <p>MyDataCoop ne vend jamais de données individuelles identifiables. Les données partagées avec les acheteurs B2B sont exclusivement :</p>
+    <ul>
+      <li>Agrégées — elles représentent des cohortes d'utilisateurs, jamais un individu</li>
+      <li>Anonymisées ou pseudonymisées selon les normes RGPD</li>
+      <li>Liées à des consentements explicitement accordés par l'utilisateur</li>
+    </ul>
+
+    <h3>Sous-traitants techniques</h3>
+    <table class="data-table">
+      <thead>
+        <tr><th>Prestataire</th><th>Rôle</th><th>Localisation</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Supabase</td><td>Base de données</td><td>UE — Irlande</td></tr>
+        <tr><td>Railway</td><td>Hébergement backend</td><td>Cloud</td></tr>
+        <tr><td>Firebase / GCM</td><td>Notifications push</td><td>Google Cloud</td></tr>
+        <tr><td>Resend</td><td>E-mails transactionnels</td><td>Cloud</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 5 -->
+  <section>
+    <div class="section-number">Article 05</div>
+    <h2>Durée de conservation</h2>
+    <ul>
+      <li>Données de compte : durée de vie du compte + 3 ans après suppression</li>
+      <li>Données de localisation et comportementales : 12 mois glissants</li>
+      <li>Données bancaires IBAN/BIC : 10 ans (obligation comptable légale)</li>
+      <li>Tokens de session : 30 jours (refresh), 1 heure (access)</li>
+      <li>Logs techniques : 90 jours</li>
+    </ul>
+  </section>
+
+  <!-- 6 -->
+  <section>
+    <div class="section-number">Article 06</div>
+    <h2>Vos droits</h2>
+    <p>Conformément au RGPD (articles 15 à 22), vous disposez des droits suivants :</p>
+    <ul>
+      <li><strong>Accès</strong> — obtenir une copie de vos données</li>
+      <li><strong>Rectification</strong> — corriger des données inexactes</li>
+      <li><strong>Effacement</strong> — demander la suppression de vos données</li>
+      <li><strong>Portabilité</strong> — recevoir vos données dans un format structuré</li>
+      <li><strong>Opposition</strong> — s'opposer à certains traitements</li>
+      <li><strong>Retrait du consentement</strong> — à tout moment, sans rétroactivité</li>
+      <li><strong>Limitation</strong> — geler temporairement un traitement</li>
+    </ul>
+    <p>Pour exercer ces droits : <a href="mailto:contact.mydatacoop@gmail.com" style="color:var(--blue)">contact.mydatacoop@gmail.com</a> — réponse sous 30 jours.</p>
+    <p>En cas de réclamation non résolue, vous pouvez saisir la <a href="https://www.cnil.fr" target="_blank" style="color:var(--blue)">CNIL</a> ou toute autorité de contrôle compétente dans votre pays de résidence.</p>
+  </section>
+
+  <!-- 7 -->
+  <section>
+    <div class="section-number">Article 07</div>
+    <h2>Sécurité des données</h2>
+    <ul>
+      <li>Chiffrement des communications via HTTPS/TLS</li>
+      <li>Authentification JWT (expiration 1h) avec rotation des refresh tokens (30j)</li>
+      <li>Stockage sécurisé sur l'appareil via flutter_secure_storage</li>
+      <li>Contrôle d'accès Row-Level Security (RLS) sur toutes les tables</li>
+      <li>Hachage des mots de passe (bcrypt)</li>
+      <li>Clés secrètes dans des variables d'environnement — jamais dans le code</li>
+      <li>Permissions Android limitées au strict nécessaire</li>
+    </ul>
+  </section>
+
+  <!-- 8 -->
+  <section>
+    <div class="section-number">Article 08</div>
+    <h2>Collecte en arrière-plan</h2>
+    <p>L'application utilise WorkManager d'Android pour des collectes périodiques :</p>
+    <ul>
+      <li>Collecte légère toutes les 6 heures (localisation, réseau, appareil)</li>
+      <li>Collecte complète une fois par jour (applications de la liste prédéfinie)</li>
+    </ul>
+    <p>Cette collecte ne s'effectue qu'avec votre consentement explicite, accordé lors du premier lancement. Elle peut être révoquée à tout moment depuis les paramètres de l'application.</p>
+  </section>
+
+  <!-- 9 -->
+  <section>
+    <div class="section-number">Article 09</div>
+    <h2>Mineurs</h2>
+    <p>MyDataCoop est exclusivement destiné aux personnes majeures (18 ans et plus). Si nous apprenons qu'un mineur a créé un compte, nous procéderons à la suppression immédiate des données associées.</p>
+  </section>
+
+  <!-- 10 -->
+  <section>
+    <div class="section-number">Article 10</div>
+    <h2>Transferts internationaux</h2>
+    <p>Les données sont hébergées au sein de l'Union Européenne (Irlande — Supabase West EU). Les prestataires américains (Firebase, Railway) sont soumis aux clauses contractuelles types (CCT) approuvées par la Commission Européenne, conformément à l'article 46 du RGPD.</p>
+  </section>
+
+  <!-- 11 -->
+  <section>
+    <div class="section-number">Article 11</div>
+    <h2>Modifications de la politique</h2>
+    <p>Toute modification substantielle fera l'objet d'une notification dans l'application et d'une mise à jour de la date de version. La poursuite de l'utilisation de l'application après notification vaut acceptation des modifications.</p>
+  </section>
+
+  <!-- 12 -->
+  <section>
+    <div class="section-number">Article 12</div>
+    <h2>Contact et DPO</h2>
+    <div class="contact-box">
+      <p>Pour toute question relative à cette politique ou à l'exercice de vos droits :</p>
+      <a href="mailto:contact.mydatacoop@gmail.com">contact.mydatacoop@gmail.com</a>
+      <p style="margin-top:16px">Un délégué à la protection des données (DPO) externe sera désigné lors de la phase de commercialisation. Ses coordonnées seront publiées dans une mise à jour de cette politique.</p>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <strong>MyDataCoop</strong> &nbsp;·&nbsp; Politique de confidentialité v1.0 &nbsp;·&nbsp; 13 mai 2026<br>
+  <span style="margin-top:6px;display:block">Vos données vous appartiennent.</span>
+</footer>
+
+</body>
+</html>
